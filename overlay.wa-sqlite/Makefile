@@ -157,7 +157,7 @@ clean-debug:
 	rm -rf debug
 
 .PHONY: debug
-debug: debug/wa-sqlite.mjs debug/wa-sqlite-async.mjs
+debug: debug/wa-sqlite.js debug/wa-sqlite-async.js
 
 debug/wa-sqlite.js: $(OBJ_FILES_DEBUG) $(EXPORTED_FUNCTIONS) $(EXPORTED_RUNTIME_METHODS)
 	mkdir -p debug
@@ -180,7 +180,7 @@ clean-dist:
 	rm -rf dist
 
 .PHONY: dist
-dist: dist/wa-sqlite.mjs dist/wa-sqlite-async.mjs
+dist: dist/wa-sqlite.js dist/wa-sqlite-async.js
 
 dist/wa-sqlite.js: $(OBJ_FILES_DIST) $(EXPORTED_FUNCTIONS) $(EXPORTED_RUNTIME_METHODS)
 	mkdir -p dist
