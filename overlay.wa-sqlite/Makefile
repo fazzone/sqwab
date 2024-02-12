@@ -55,7 +55,7 @@ EMFLAGS_DEBUG = \
 EMFLAGS_DIST = \
 	-Oz \
 	-flto \
-	--closure 1 \
+#	--closure 1 \
 	$(EMFLAGS_COMMON)
 
 EMFLAGS_INTERFACES = \
