@@ -62,7 +62,8 @@ jobs:
       run: |
         make clean
         make ${{inputs.make_args}}
-        (cd dist; tar czf ../wa-sqlite.dist.tgz .)
+        [[ -d dist  ]] && (cd dist;  tar czf ../wa-sqlite.dist.tgz .)
+        [[ -d debug ]] && (cd debug; tar czf ../wa-sqlite.debug.tgz .)
 
     # Package
     - name: Create release
