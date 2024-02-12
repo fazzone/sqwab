@@ -42,7 +42,7 @@ jobs:
       uses: actions/cache@v3
       with:
         path: ${{env.EM_CACHE_FOLDER}}
-        key: ${{inputs.em_version}}-${{runner.os}}
+        key: ${{inputs.em_version}}-IMGONNALOSEIT-${{runner.os}}
     - uses: mymindstorm/setup-emsdk@v12
       with:
         version: ${{inputs.em_version}}
@@ -60,7 +60,7 @@ jobs:
     - name: Build wa-sqlite
       working-directory: ./wa-sqlite
       run: |
-        make clean
+        make spotless
         make ${{inputs.make_args}}
         [[ -d dist  ]] && (cd dist;  tar czf ../wa-sqlite.dist.tgz .)
         [[ -d debug ]] && (cd debug; tar czf ../wa-sqlite.debug.tgz .)
