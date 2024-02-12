@@ -60,6 +60,7 @@ jobs:
     - name: Build wa-sqlite
       working-directory: ./wa-sqlite
       run: |
+        make clean
         make ${{inputs.make_args}}
         (cd dist; tar czf ../wa-sqlite.dist.tgz .)
 
