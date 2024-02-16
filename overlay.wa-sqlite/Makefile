@@ -55,6 +55,7 @@ EMFLAGS_DEBUG = \
 EMFLAGS_DIST = \
 	-Oz \
 	-flto \
+	-sMODULARIZE \
 #	--closure 1 \
 	$(EMFLAGS_COMMON)
 
